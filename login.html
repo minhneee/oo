@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BQC Sport Đăng Nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="header"> 
+        <div class="header-top">
+            <div class="menu-top">
+                <div class="logo">
+                    <h1><a href="home.html">QBC Sport</a></h1> 
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html">Trang Chủ</a></li>
+                        <li><a href="cart.html">Sản Phẩm</a></li>
+                        <li><a href="introduce.html">Giới Thiệu</a></li>
+                        <li><a href="contact.html">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="user">
+                    <a href=""><i class="fa fa-user"></i></a>
+                </div>
+                <div class="cart">
+                    <a href=""><i class="fa fa-shopping-bag"></i></a>
+                </div>
+                <div class="love">
+                    <a href=""><i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="login-container">
+            <h2>ĐĂNG NHẬP</h2>
+            <div class="progress-bar"></div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Email/Số ĐT" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Mật khẩu" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Ghi nhớ đăng nhập</label>
+                </div>
+                <button type="submit" class="btn-login">ĐĂNG NHẬP</button>
+                <div id="error" class="error"></div>
+            </form>
+            <div class="links">
+                <a href="#">Quên mật khẩu</a> | <a href="signup.html">Đăng ký tại đây</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const errorDiv = document.getElementById('error');
+        const adminUsername = "admin";
+        const adminPassword = "123456";
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === adminUsername && password === adminPassword) {
+                window.location.href = "admin.html";
+            } else {
+                errorDiv.textContent = "Invalid username or password!";
+            }
+        });
+    </script>
+    <div class="footer">
+        <div class="copyright">
+            <p>© 2024 Công ty TNHH QBC Việt Nam | Đăng Nhập</p>
+        </div>
+    </div>
+</body>

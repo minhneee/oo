@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BQC Sport Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="main">
+        <header class="top-header">
+            <h1>Admin DashBoard</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products">
+                <button type="submit">Search</button>
+            </div>
+        </header>
+        <div>
+            <div class="sidebar">
+                <div><h2>Menu</h2></div>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa-brands fa-product-hunt"></i> Products</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+                    <li><a href="#"><i class="fa-solid fa-users"></i> Customers</a></li>
+                    <li><a href="#"><i class="fa-solid fa-flag"></i> Reports</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="product-and-button">
+                    <h2>Products List</h2>
+                    <button>Add Product</button>
+                </div>
+              <table>
+                <tr>
+                  <th>ID</th>
+                  <th>Product Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Product 1</td>
+                  <td>Category A</td>
+                  <td>$100</td>
+                  <td>50</td>
+                  <td>
+                    <button class="edit-btn">Edit</button
+                    ><button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Product 2</td>
+                  <td>Category B</td>
+                  <td>$150</td>
+                  <td>20</td>
+                  <td>
+                    <button class="edit-btn">Edit</button
+                    ><button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>© 2024 Công ty TNHH QBC Việt Nam | Trang Quản Trị</p>
+        </div>
+    </div>
+</body>
